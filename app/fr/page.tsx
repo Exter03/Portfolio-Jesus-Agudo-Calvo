@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
+import { tsParticles } from "@tsparticles/tsparticles";
+
+
 
 export default function FrenchHome() {
   const router = useRouter();
