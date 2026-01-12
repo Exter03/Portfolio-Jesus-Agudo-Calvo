@@ -28,7 +28,6 @@ export default function SpanishHome() {
           background: { color: { value: "transparent" } },
           fpsLimit: 60,
           particles: {
-            particles: {
             number: {
               value: 90,
               density: { 
