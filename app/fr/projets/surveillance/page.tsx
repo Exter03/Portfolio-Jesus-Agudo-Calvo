@@ -45,17 +45,17 @@ export default function Surveillance() {
 
         <motion.button
           onClick={() => router.push("/fr")}
-          whileHover={{ scale: 1.05, shadow: "0 0 40px #0ff" }}
+          whileHover={{ scale: 1.05, boxShadow: "0 0 40px #0ff" }}
           className="px-8 py-3 mt-4 bg-cyan-500 rounded-3xl font-semibold drop-shadow-[0_0_15px_#0ff] transition-all duration-300"
         >
           Retour aux projets
         </motion.button>
       </motion.div>
 
-	<motion.footer className="relative mt-16 text-sm text-gray-300 z-10 drop-shadow-[0_0_10px_#0ff] animate-flicker-footer">
+      {/* Footer */}
+      <motion.footer className="relative mt-16 text-sm text-gray-300 z-10 drop-shadow-[0_0_10px_#0ff] animate-flicker-footer">
         © 2025 Jesús Agudo Calvo — Portfolio
-	</motion.footer>
-
+      </motion.footer>
 
       <style global jsx>{`
         @keyframes gradient {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
