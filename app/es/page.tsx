@@ -32,7 +32,7 @@ export default function SpanishHome() {
               value: 90,
               density: { 
                 enable: true, 
-                factor: 80 
+               value_area: 800,
               }, 
             },
             color: { value: ["#00f0ff", "#0ff", "#0fffb0"] },
