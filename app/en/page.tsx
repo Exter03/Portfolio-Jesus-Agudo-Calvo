@@ -7,10 +7,6 @@ import Particles from "@tsparticles/react";
 export default function EnglishHome() {
   const router = useRouter();
 
-  const particlesInit = async (main: any) => {
-    await loadFull(main);
-  };
-
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start text-white overflow-hidden p-8">
 
