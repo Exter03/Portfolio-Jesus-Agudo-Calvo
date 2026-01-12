@@ -47,7 +47,7 @@ export default function ADSecurite() {
 
         <motion.button
           onClick={() => router.push("/fr")}
-          whileHover={{ scale: 1.05, shadow: "0 0 40px #0ff" }}
+          whileHover={{ scale: 1.05, boxShadow: "0 0 40px #0ff" }}
           className="px-8 py-3 mt-4 bg-cyan-500 rounded-3xl font-semibold drop-shadow-[0_0_15px_#0ff] transition-all duration-300"
         >
           Retour aux projets
