@@ -22,7 +22,6 @@ export default function SpanishHome() {
       {/* Partículas */}
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={{
           fullScreen: { enable: false },
           background: { color: { value: "transparent" } },

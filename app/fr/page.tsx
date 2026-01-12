@@ -22,7 +22,6 @@ export default function FrenchHome() {
       {/* Particules */}
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={{
           fullScreen: { enable: false },
           background: { color: { value: "transparent" } },
