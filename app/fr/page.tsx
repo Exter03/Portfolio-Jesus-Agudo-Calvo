@@ -28,7 +28,13 @@ export default function FrenchHome() {
           background: { color: { value: "transparent" } },
           fpsLimit: 60,
           particles: {
-            number: { value: 90, density: { enable: true, value_area: 800 } },
+            number: {
+              value: 90,
+              density: { 
+                enable: true, 
+                factor: 80 
+              }, 
+            },
             color: { value: ["#00f0ff", "#0ff", "#0fffb0"] },
             shape: { type: "circle" },
             opacity: { value: 0.5 },
