@@ -1,9 +1,8 @@
-"use client"; 
+"use client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Particles from "@tsparticles/react";
-import { tsParticles } from "@tsparticles/tsparticles";
-
+import { loadFull } from "tsparticles";
 
 export default function SpanishHome() {
   const router = useRouter();
@@ -32,12 +31,15 @@ export default function SpanishHome() {
             number: { value: 90, density: { enable: true, area: 800 } },
             color: { value: ["#00f0ff", "#0ff", "#0fffb0"] },
             shape: { type: "circle" },
-            opacity: { value: 0.5, anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false } },
+            opacity: { value: 0.5 },
             size: { value: { min: 1, max: 4 } },
             move: { enable: true, speed: 1, direction: "none", outModes: "out" },
             links: { enable: true, distance: 140, color: "#00f0ff", opacity: 0.2, width: 1 },
           },
-          interactivity: { events: { onHover: { enable: true, mode: "repulse" } }, modes: { repulse: { distance: 150, duration: 0.4 } } },
+          interactivity: {
+            events: { onHover: { enable: true, mode: "repulse" } },
+            modes: { repulse: { distance: 150, duration: 0.4 } },
+          },
           detectRetina: true,
         }}
         className="absolute inset-0 z-0"
@@ -77,7 +79,7 @@ export default function SpanishHome() {
 
         {/* Subtítulo Hospital */}
         <motion.h3 className="relative text-xl md:text-2xl text-gray-300 mb-6 z-10 drop-shadow-[0_0_15px_#0ff]">
-         Hospital Georges Daumezon
+          Hospital Georges Daumezon
         </motion.h3>
 
         {/* Tarjetas de proyectos */}
@@ -137,4 +139,3 @@ export default function SpanishHome() {
     </div>
   );
 }
-

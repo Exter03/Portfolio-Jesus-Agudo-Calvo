@@ -2,9 +2,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Particles from "@tsparticles/react";
-import { tsParticles } from "@tsparticles/tsparticles";
-
-
+import { loadFull } from "tsparticles";
 
 export default function FrenchHome() {
   const router = useRouter();
@@ -16,12 +14,12 @@ export default function FrenchHome() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start text-white overflow-hidden p-8">
 
-      {/* Fondo degradado animado */}
+      {/* Fond dégradé animé */}
       <div className="absolute inset-0">
         <div className="w-full h-full animate-gradient bg-gradient-to-r from-[#0b0c10] via-[#0f1923] to-[#09121a]"></div>
       </div>
 
-      {/* Partículas */}
+      {/* Particules */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -33,30 +31,33 @@ export default function FrenchHome() {
             number: { value: 90, density: { enable: true, area: 800 } },
             color: { value: ["#00f0ff", "#0ff", "#0fffb0"] },
             shape: { type: "circle" },
-            opacity: { value: 0.5, anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false } },
+            opacity: { value: 0.5 },
             size: { value: { min: 1, max: 4 } },
             move: { enable: true, speed: 1, direction: "none", outModes: "out" },
             links: { enable: true, distance: 140, color: "#00f0ff", opacity: 0.2, width: 1 },
           },
-          interactivity: { events: { onHover: { enable: true, mode: "repulse" } }, modes: { repulse: { distance: 150, duration: 0.4 } } },
+          interactivity: {
+            events: { onHover: { enable: true, mode: "repulse" } },
+            modes: { repulse: { distance: 150, duration: 0.4 } },
+          },
           detectRetina: true,
         }}
         className="absolute inset-0 z-0"
       />
 
-      {/* Contenido principal */}
+      {/* Contenu principal */}
       <motion.div
         className="relative z-10 flex flex-col items-center p-8 w-full max-w-5xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Título */}
+        {/* Titre */}
         <motion.h1 className="text-5xl md:text-6xl font-bold text-cyan-400 mb-4 drop-shadow-[0_0_25px_#0ff] animate-flicker">
           Jesús Agudo Calvo
         </motion.h1>
 
-        {/* Botón À propos */}
+        {/* Bouton À propos */}
         <motion.button
           onClick={() => router.push("/fr/about")}
           whileHover={{ scale: 1.1, boxShadow: "0 0 30px #a0f, 0 0 60px #a0f" }}
@@ -66,22 +67,22 @@ export default function FrenchHome() {
           À propos
         </motion.button>
 
-        {/* Subtítulo proyectos */}
+        {/* Sous-titre projets */}
         <motion.h2 className="relative text-xl md:text-2xl text-gray-300 mb-4 z-10 drop-shadow-[0_0_15px_#0ff]">
           Mes projets
         </motion.h2>
 
-        {/* Mini descripción */}
+        {/* Mini description */}
         <motion.p className="relative text-gray-400 text-center max-w-2xl mb-6 z-10 drop-shadow-[0_0_10px_#0ff]">
           Ici, vous trouverez mes compétences et expériences professionnelles.
         </motion.p>
 
-        {/* Subtítulo Hospital */}
+        {/* Sous-titre Hôpital */}
         <motion.h3 className="relative text-xl md:text-2xl text-gray-300 mb-6 z-10 drop-shadow-[0_0_15px_#0ff]">
-         Hôpital Georges Daumezon
+          Hôpital Georges Daumezon
         </motion.h3>
 
-        {/* Tarjetas de proyectos */}
+        {/* Cartes projets */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-10 w-full max-w-6xl">
           <motion.div
             whileHover={{ scale: 1.05, rotate: 1 }}
@@ -111,7 +112,7 @@ export default function FrenchHome() {
           </motion.div>
         </div>
 
-        {/* Botón volver a página principal */}
+        {/* Bouton retour accueil */}
         <motion.button
           onClick={() => router.push("/")}
           whileHover={{ scale: 1.05 }}
